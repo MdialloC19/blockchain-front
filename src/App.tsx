@@ -10,12 +10,53 @@ const FullscreenStyle = createGlobalStyle`
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  body {
+    overflow-y: auto;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
   }
 
   #root {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Styles personnalisés pour la barre de défilement */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3050cc;
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2040aa;
+  }
+  
+  /* Fix scrollbar position */
+  body::-webkit-scrollbar {
+    position: absolute;
+    right: 0;
+  }
+  
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3050cc #f1f1f1;
   }
 `;
 
@@ -52,21 +93,20 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  margin: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   background-color: ${props => props.theme.colors.secondary};
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
   
   & > * {
     width: 100%;
+    max-width: 100%;
   }
 `;
 

@@ -13,6 +13,7 @@ const LayoutContainer = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${props => props.theme.colors.secondary};
+  align-items: center;
 `;
 
 const MainContent = styled.main`
@@ -26,6 +27,7 @@ const MainContent = styled.main`
   overflow-y: auto;
   box-sizing: border-box;
   min-height: calc(100vh - 70px); /* 70px is approximately the navbar height */
+  align-items: center;
 `;
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

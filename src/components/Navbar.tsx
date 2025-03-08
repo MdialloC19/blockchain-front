@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaFile, FaHome } from 'react-icons/fa';
+import { FaFile } from 'react-icons/fa';
 
 const NavContainer = styled.nav`
   background-color: ${props => props.theme.colors.primary};
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 `;
 
 const NavContent = styled.div`
@@ -16,7 +18,10 @@ const NavContent = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 `;
 
 const Logo = styled(Link)`

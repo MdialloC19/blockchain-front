@@ -6,11 +6,19 @@ import ActionCard from '../components/ActionCard';
 
 const HomeContainer = styled.div`
   padding: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const HeaderSection = styled.div`
   text-align: center;
   margin-bottom: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 `;
 
 const Title = styled.h1`
@@ -37,6 +45,9 @@ const CardsGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 `;
 
 const Home: React.FC = () => {

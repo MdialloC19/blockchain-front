@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.dark};
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto;
   }
   
   #root {
